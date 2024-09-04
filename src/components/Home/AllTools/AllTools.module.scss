@@ -1,0 +1,67 @@
+.body {
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  z-index: 1;
+}
+
+
+.addTools {
+  padding: 20px;
+  margin-top: 30px;
+  border-radius: 30px;
+  border: 1px solid orange;
+  background-color: #13073D;
+  color: orange;
+  transition: ease 0.5s;
+
+  &:hover {
+    background-color: orange;
+    border: 1px solid #13073D;
+    color: #13073D;
+  }
+
+}
+
+.popup {
+  position: fixed;
+  background-color: rgba(19, 7, 61, 0.38);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  animation: opasity 0.5s;
+
+}
+
+.shadowPopup {
+  background-color: #13073D;
+  border-radius: 30px;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: orange;
+  overflow: hidden;
+  padding: 20px;
+
+}
+
+.choiceTools {
+  display: flex;
+  cursor: pointer;
+
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+@keyframes opasity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}

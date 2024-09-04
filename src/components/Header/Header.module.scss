@@ -1,0 +1,130 @@
+.res {
+  display: flex;
+
+
+}
+
+.body {
+  background-color: #13073D;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.shadowSetting {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  z-index: 2;
+  background-color: #13073D;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  color: orange;
+
+  width: 300px;
+  padding: 15px;
+  padding-bottom: 30px;
+}
+
+.save {
+  padding: 20px;
+  background-color: #59598E;
+  border-radius: 30px;
+  color: orange;
+}
+
+@keyframes opasity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
+
+.bodySetting {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(89, 89, 142, 0.43);
+  animation: opasity 0.5s;
+  z-index: 2;
+
+
+  input {
+    background-color: #E0CBDB;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 20px;
+  }
+
+  div:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  svg {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+
+  }
+}
+
+.settingIcon {
+  width: 30px;
+  height: 30px;
+
+
+  svg {
+    width: 100%;
+    height: 100%;
+
+    path {
+      fill: orange;
+    }
+  }
+}
+
+.settingItem {
+  display: flex;
+  align-items: center;
+}
+
+.checkBox {
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    background-color: #E0CBDB;
+  }
+
+
+}
+
+.checked {
+  &::before {
+    content: '';
+    background-image: url("../src/assets/check.svg");
+    position: absolute;
+    top: 0;
+    left: -40px;
+    width: 20px;
+    height: 20px;
+    z-index: 2;
+  }
+}
+
