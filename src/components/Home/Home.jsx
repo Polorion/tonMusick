@@ -9,6 +9,7 @@ import Gold from "/src/assets/gold.svg";
 
 export const Home = () => {
     const items = useSelector(state => state.price.myTools)
+    const q = (JSON.parse(localStorage.getItem('item')))
     const allGold = items.filter(el => el.material === 'gold')
     const allEnergy = items.filter(el => el.material === 'energy')
     const allDisk = items.filter(el => el.material === 'disk')
@@ -78,7 +79,7 @@ export const Home = () => {
                     <td>расход</td>
                     <td>доход</td>
                 </tr>
-                {items.map((el, id) => {
+                {q.map((el, id) => {
                     return <Item key={id} el={el}/>
                 })}
                 <tr>

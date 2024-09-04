@@ -44,6 +44,10 @@ export const Item = ({el}) => {
             <td>{el.name}
                 <div className={S.mt} onClick={() => {
                     dispatch((deleteItem(el.id)))
+                    const allTools = JSON.parse(localStorage.getItem('item'))
+                    const q = allTools.filter(els => els.id !== el.id)
+                    localStorage.setItem('item', JSON.stringify(q))
+                    console.log(q)
                 }}>Удалить
                 </div>
             </td>
