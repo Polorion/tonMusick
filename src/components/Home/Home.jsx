@@ -97,7 +97,7 @@ export const Home = () => {
                         <div><Disk/> {(allDiskMine - allDiskDown).toFixed(1)}</div>
                         <div><Drink/> {(allEnergyMine - allEnergyDown).toFixed(1)}</div>
                         <div><Gold/> {(allGoldMine - allGoldDown).toFixed(1)}</div>
-                        <div><Ton/> {allTon}</div>
+                        <div><Ton/> {allTon.toFixed(2)}</div>
                     </td>
                 </tr>
                 </tbody>
