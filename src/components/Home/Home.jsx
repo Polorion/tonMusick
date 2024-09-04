@@ -23,11 +23,11 @@ export const Home = () => {
             const profitDisk = el.spending.disk * price.disk
             switch (el.material) {
                 case 'disk':
-                    return (el.income * price.disk - profitEnergy - profitGold).toFixed(5) * 4
+                    return (el.income * price.disk - profitEnergy - profitGold).toFixed(5) * 1
                 case 'energy':
-                    return (el.income * price.energy - profitDisk - profitGold).toFixed(5) * 4
+                    return (el.income * price.energy - profitDisk - profitGold).toFixed(5) * 1
                 case 'gold':
-                    return (el.income * price.gold - profitEnergy - profitDisk).toFixed(5) * 4
+                    return (el.income * price.gold - profitEnergy - profitDisk).toFixed(5) * 1
             }
         })
         return total
