@@ -128,3 +128,27 @@
   }
 }
 
+
+@media screen and (max-width: 652px) {
+  .body {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .res {
+    font-size: 10px;
+  }
+  .settingIcon {
+    width: 15px;
+    height: 15px;
+
+
+    svg {
+      width: 100%;
+      height: 100%;
+
+      path {
+        fill: orange;
+      }
+    }
+  }
+}
