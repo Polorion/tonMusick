@@ -11,9 +11,9 @@ export const Home = () => {
     const items = useSelector(state => state.price.myTools)
     const qd = (JSON.parse(localStorage.getItem('item')))
 
-    const allGold = items.filter(el => el.material === 'gold')
-    const allEnergy = items.filter(el => el.material === 'energy')
-    const allDisk = items.filter(el => el.material === 'disk')
+    const allGold = qd?.filter(el => el.material === 'gold')
+    const allEnergy = qd?.filter(el => el.material === 'energy')
+    const allDisk = qd?.filter(el => el.material === 'disk')
     const price = useSelector(state => state.price.material)
     const profit = () => {
         const total = items.map(el => {
