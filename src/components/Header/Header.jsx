@@ -6,23 +6,32 @@ import Disk from "/src/assets/disk.svg";
 import Ton from "/src/assets/ton.svg";
 import Drink from "/src/assets/drink.svg";
 import Gold from "/src/assets/gold.svg";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import SettingIcon from "/src/assets/setting.svg";
 import {useState} from "react";
+import {setDisk, setEnergy, setGold} from "../../store/price/price.js";
 
 
 export const Header = () => {
     const [openSetting, setOpenSetting] = useState(false)
     const [check, setCheck] = useState(false)
     const price = useSelector(state => state.price.material)
+    const [inputGold, setInputGold] = useState()
+    const [inputEnergy, setInputEnergy] = useState()
+    const [inputDisk, setInputDisk] = useState()
+    const dispatch = useDispatch()
+
     const onSave = () => {
+        dispatch(setGold(inputGold))
+        dispatch(setEnergy(inputEnergy))
+        dispatch(setDisk(inputDisk))
         setOpenSetting(false)
     }
     return (
         <div className={S.body}>
             <div className={S.res}>
                 <ItemResources Icon={Disk} price={price.disk}/>
-                <ItemResources Icon={Ton} price={price.gold}/>
+                <ItemResources Icon={Ton} price={'5.5'}/>
                 <ItemResources Icon={Drink} price={price.energy}/>
                 <ItemResources Icon={Gold} price={price.gold}/>
             </div>
@@ -41,15 +50,21 @@ export const Header = () => {
                         <div>своя цена на ресурсы</div>
                         <div className={S.settingItem}>
                             <Disk/>
-                            <input type="number"/>
+                            <input onInput={(e) => {
+                                setInputGold(e.target.value)
+                            }} type="number"/>
                         </div>
                         <div className={S.settingItem}>
                             <Drink/>
-                            <input type="number"/>
+                            <input onInput={(e) => {
+                                setInputEnergy(e.target.value)
+                            }} type="number"/>
                         </div>
                         <div className={S.settingItem}>
                             <Gold/>
-                            <input type="number"/>
+                            <input onInput={(e) => {
+                                setInputDisk(e.target.value)
+                            }} type="number"/>
                         </div>
                         <div onClick={() => {
                             setCheck(prevState => !prevState)

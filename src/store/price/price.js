@@ -187,11 +187,24 @@ export const price = createSlice({
         },
         deleteItem: (state, {payload}) => {
             state.myTools = state.myTools.filter(el => el.id !== payload)
-        }
+        },
+        setGold: (state, {payload}) => {
+            state.material.gold = payload
+        },
+        setEnergy: (state, {payload}) => {
+            state.material.energy = payload
+        },
+        setDisk: (state, {payload}) => {
+            state.material.disk = payload
+        },
     },
 });
 
-export const {addItem, deleteItem} =
+export const {
+    addItem, deleteItem, setGold,
+    setEnergy,
+    setDisk
+} =
     price.actions;
 
 export default price.reducer;
