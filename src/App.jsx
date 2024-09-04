@@ -5,6 +5,7 @@ import {AllTools} from "./components/Home/AllTools/AllTools.jsx";
 import {useSelector} from "react-redux";
 
 function App() {
+    const qd = (JSON.parse(localStorage.getItem('item')))
     const items = useSelector(state => state.price.myTools)
     return (
         <div className={'container'}>
@@ -12,7 +13,7 @@ function App() {
             <div className={'back'}>
 
                 <AllTools/>
-                {<Home/>}
+                {qd ? <Home/> : <div></div>}
             </div>
         </div>
     )

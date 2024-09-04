@@ -16,7 +16,7 @@ export const Home = () => {
     const allDisk = qd?.filter(el => el.material === 'disk')
     const price = useSelector(state => state.price.material)
     const profit = () => {
-        const total = items.map(el => {
+        const total = qd?.map(el => {
 
             const profitGold = el.spending.gold * price.gold
             const profitEnergy = el.spending.energy * price.energy
