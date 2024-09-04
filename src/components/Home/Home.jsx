@@ -79,7 +79,7 @@ export const Home = () => {
                     <td>расход</td>
                     <td>доход</td>
                 </tr>
-                {q.map((el, id) => {
+                {q?.map((el, id) => {
                     return <Item key={id} el={el}/>
                 })}
                 <tr>
