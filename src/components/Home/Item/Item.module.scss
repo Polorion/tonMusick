@@ -34,3 +34,28 @@
 .body {
   position: relative;
 }
+
+@media screen and (max-width: 652px) {
+  .ton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  .styleBlock {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@ import Ton from "/src/assets/ton.svg";
 
 export const Item = ({el}) => {
     const dispatch = useDispatch()
-    console.log(el)
+
     const choiceElem = () => {
         switch (el.material) {
             case 'disk':

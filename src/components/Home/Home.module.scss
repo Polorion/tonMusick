@@ -45,3 +45,24 @@
     }
   }
 }
+
+@media screen and (max-width: 652px) {
+  .styleBlock {
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 10px;
+  }
+}
