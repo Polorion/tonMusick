@@ -51,7 +51,7 @@ export const Header = () => {
                         <div className={S.settingItem}>
                             <Disk/>
                             <input onInput={(e) => {
-                                setInputGold(e.target.value)
+                                setInputDisk(e.target.value)
                             }} type="number"/>
                         </div>
                         <div className={S.settingItem}>
@@ -63,7 +63,7 @@ export const Header = () => {
                         <div className={S.settingItem}>
                             <Gold/>
                             <input onInput={(e) => {
-                                setInputDisk(e.target.value)
+                                setInputGold(e.target.value)
                             }} type="number"/>
                         </div>
                         <div onClick={() => {
