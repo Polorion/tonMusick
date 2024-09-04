@@ -8,7 +8,7 @@ import Drink from "/src/assets/drink.svg";
 import Gold from "/src/assets/gold.svg";
 
 export const Home = () => {
-    const items = useSelector(state => state.price.myTools)
+    const dq = useSelector(state => state.price.myTools)
     const qd = (JSON.parse(localStorage.getItem('item')))
 
     const allGold = qd?.filter(el => el.material === 'gold')
@@ -51,19 +51,19 @@ export const Home = () => {
         0,
     )
 
-    const allGoldDown = items.reduce(
+    const allGoldDown = qd.reduce(
         (accumulator, currentValue) => {
             return accumulator + currentValue.spending.gold
         },
         0,
     )
-    const allEnergyDown = items.reduce(
+    const allEnergyDown = qd.reduce(
         (accumulator, currentValue) => {
             return accumulator + currentValue.spending.energy
         },
         0,
     )
-    const allDiskDown = items.reduce(
+    const allDiskDown = qd.reduce(
         (accumulator, currentValue) => {
             return accumulator + currentValue.spending.disk
         },
