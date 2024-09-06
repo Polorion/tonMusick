@@ -18,6 +18,8 @@ export const Item = ({el}) => {
                 return <Drink/>
             case 'gold':
                 return <Gold/>
+            case 'djset':
+                return <Ton/>
         }
     }
 
@@ -34,6 +36,8 @@ export const Item = ({el}) => {
                 return (el.income * price.energy - profitDisk - profitGold).toFixed(3)
             case 'gold':
                 return (el.income * price.gold - profitEnergy - profitDisk).toFixed(3)
+            case 'djset':
+                return (el.income - price.gold - profitEnergy - profitDisk).toFixed(3)
         }
 
 

@@ -174,7 +174,41 @@ const initialState = {
                 gold: 240
             },
         },
-    ]
+    ],
+    djSet: [{
+        name: 'djSet 1',
+        id: 12112,
+        material: 'djset',
+        income: 0.36,
+        spending: {
+            energy: 72,
+            disk: 30,
+            gold: 36
+        },
+
+    }, {
+        name: 'djSet 2',
+        id: 121122,
+        material: 'djset',
+        income: 0.9,
+        spending: {
+            energy: 168,
+            disk: 84,
+            gold: 72
+        },
+
+    }, {
+        name: 'djSet 3',
+        id: 121123,
+        material: 'djset',
+        income: 2.1,
+        spending: {
+            energy: 390,
+            disk: 192,
+            gold: 168
+        },
+
+    },]
 };
 
 

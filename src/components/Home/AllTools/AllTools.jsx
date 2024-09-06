@@ -6,6 +6,7 @@ import {Tools} from "./Tools/Tools.jsx";
 import gold from "/src/assets/goldTools.png"
 import disk from "/src/assets/diskTools.png"
 import energy from "/src/assets/energyTools.png"
+import djset from "/src/assets/djset.png"
 
 export const AllTools = () => {
     const [isOpen, setOpen] = useState(false)
@@ -13,6 +14,7 @@ export const AllTools = () => {
     const energyTools = useSelector(state => state.price.energyItem)
     const goldTools = useSelector(state => state.price.goldItem)
     const diskTools = useSelector(state => state.price.diskItem)
+    const djSetTools = useSelector(state => state.price.djSet)
 
     const onClick = () => {
         setOpen(prevState => !prevState)
@@ -47,7 +49,15 @@ export const AllTools = () => {
                         }>
 
                             <img src={gold} alt=""/>
-                            
+
+                        </div>
+                        <div onClick={() => {
+                            setActiveTools(djSetTools)
+                        }
+                        }>
+
+                            <img src={djset} alt=""/>
+
                         </div>
                     </div>
                     <div>

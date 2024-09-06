@@ -14,6 +14,7 @@ export const Home = () => {
     const allGold = qd?.filter(el => el.material === 'gold')
     const allEnergy = qd?.filter(el => el.material === 'energy')
     const allDisk = qd?.filter(el => el.material === 'disk')
+    const allDjset = qd?.filter(el => el.material === 'djset')
     const price = useSelector(state => state.price.material)
     const profit = () => {
         const total = qd?.map(el => {
@@ -28,6 +29,8 @@ export const Home = () => {
                     return (el.income * price.energy - profitDisk - profitGold).toFixed(5) * 1
                 case 'gold':
                     return (el.income * price.gold - profitEnergy - profitDisk).toFixed(5) * 1
+                case 'djset':
+                    return (el.income - price.gold - profitEnergy - profitDisk).toFixed(5) * 1
             }
         })
         return total
@@ -99,7 +102,7 @@ export const Home = () => {
                         <div><Disk/> {(allDiskMine - allDiskDown).toFixed(1)}</div>
                         <div><Drink/> {(allEnergyMine - allEnergyDown).toFixed(1)}</div>
                         <div><Gold/> {(allGoldMine - allGoldDown).toFixed(1)}</div>
-                        <div><Ton/> {allTon.toFixed(2)}</div>
+                        <div><Ton/> {allTon.toFixed(3)}</div>
                     </td>
                 </tr>
                 </tbody>
